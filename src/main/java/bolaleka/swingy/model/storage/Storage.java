@@ -37,7 +37,12 @@ public class Storage {
         FileWriter writer = new FileWriter(heroes, true);
         BufferedReader br = new BufferedReader(new FileReader("heroes.txt"));
         String line;
+
         while ((line = br.readLine()) != null) {
+            if(line.contains("")) {
+                System.out.println(">> No input found");
+                System.exit(1);
+            }
             if (line.contains(this.name)) {
                 System.out.println(">> The name [" + this.name + "]" + " already exist, try different name");
                 System.exit(1);
