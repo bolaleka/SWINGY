@@ -5,3 +5,6 @@ hut,Hero,1,1220,Knife,SilverArmor,35,9,5
 you,Hero,1,1000,Knife,SilverArmor,40,9,5
 test1,Hero,1,1220,Knife,SilverArmor,34,9,5
 test2,Hero,1,1000,Knife,SilverArmor,40,9,5
+ju,Hero,1,1000,Knife,SilverArmor,40,9,
+tick,Hero,1,1000,Knife,SilverArmor,40,9,5
+twick,Hero,1,1220,Knife,SilverArmor,30,9,5

@@ -20,7 +20,7 @@ public class Navigate {
         
     }
     
-    public void moveDirection(int coordinates, String name) throws IOException {
+    public void moveDirection(int mapSize, String name) throws IOException {
         Monster enemy = new Monster(name);
         //Storage curr = new Storage(name);
         PrintStat hero = new PrintStat(name);
@@ -51,7 +51,7 @@ public class Navigate {
                             fight.battle(name);
                             break;
                         }
-                        if(y == coordinates) {
+                        if(y == mapSize) {
                             System.out.println("You have reach the end of the border, now you have move on to the next level");
                             setVitoryMessage(name);
                             y = 1;
@@ -68,7 +68,7 @@ public class Navigate {
                             fight.battle(name);
                             break;
                         }
-                        if(y == (-coordinates)) {
+                        if(y == (-mapSize)) {
                             System.out.println("You have reach the end of the border, now you have move on to the next level");
                             setVitoryMessage(name);
                             y = 1;
@@ -85,7 +85,7 @@ public class Navigate {
                             fight.battle(name);
                             break;
                         }
-                        if(x == (-coordinates)) {
+                        if(x == (-mapSize)) {
                             System.out.println("You have reach the end of the border, now you have move on to the next level");
                             setVitoryMessage(name);
                             x = 1;
@@ -103,7 +103,7 @@ public class Navigate {
                             fight.battle(name);
                             break;
                         }
-                        if(x == coordinates) {
+                        if(x == mapSize) {
                             System.out.println("You have reach the end of the border, now you have move on to the next level");
                             setVitoryMessage(name);
                             x = 1;

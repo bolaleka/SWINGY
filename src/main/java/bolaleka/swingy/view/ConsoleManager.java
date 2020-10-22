@@ -20,7 +20,11 @@ public class ConsoleManager {
         try {
             
             int input = INPUT.nextInt();
+            if(Integer.toString(input).isEmpty()) {
+                System.out.println("No input");
+            }
             String name = INPUT.nextLine();
+           
 
             switch (input) {
                 case 1:
@@ -28,15 +32,16 @@ public class ConsoleManager {
                 System.out.println("..............................................");
                 
                 name = INPUT.nextLine();
-                if(name == null) {
+                if(name.isEmpty()) {
                     System.out.println("No input found");
-                    System.exit(1);
-                }
-                
+                    System.exit(0);
+                }    
                 if(name.length() > 10) {
                     System.out.println("Name too long");
                     System.exit(1);
                 }
+                
+
                 DataController control = new DataController(name);
                 control.getStorage().saveData(name);
 
