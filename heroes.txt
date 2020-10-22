@@ -3,3 +3,5 @@ for,Hero,2,3970,Knife,SilverArmor,27,18,10
 free,Hero,2,2650,Knife,SilverArmor,24,18,10
 hut,Hero,1,1220,Knife,SilverArmor,35,9,5
 you,Hero,1,1000,Knife,SilverArmor,40,9,5
+test1,Hero,1,1220,Knife,SilverArmor,34,9,5
+test2,Hero,1,1000,Knife,SilverArmor,40,9,5

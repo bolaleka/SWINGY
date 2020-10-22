@@ -28,6 +28,10 @@ public class ConsoleManager {
                 System.out.println("..............................................");
                 
                 name = INPUT.nextLine();
+                if(name == null) {
+                    System.out.println("No input found");
+                    System.exit(1);
+                }
                 
                 if(name.length() > 10) {
                     System.out.println("Name too long");
