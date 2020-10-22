@@ -135,7 +135,6 @@ public class GuiManager {
             public void actionPerformed(ActionEvent e) {
                 String textFieldValue = enterHeroName.getText();
                 if (!textFieldValue.isEmpty() && !textFieldValue.isBlank()) {
-                    System.out.println(textFieldValue);
                     try {
                         controller = new DataController(textFieldValue);
                         controller.getStorage().saveUIData(textFieldValue);

@@ -76,14 +76,10 @@ public class UtilityMode implements ActionListener {
             
                 Monster enemy;
                 while (++y >= 0) {
-                 //  northButton.setText("North " + Integer.toString(y));
                     try {
-                        enemy = new Monster(name);
-                    
+                    enemy = new Monster(name);
                     String enemyName = enemies[getRandom.nextInt(enemies.length)];
-
                     if (enemyName != null) {
-                      
                         JOptionPane.showMessageDialog(window, "You have encounter a " + enemyName + "   HP: " + enemy.getHP()
                                 + " Attack:    " + enemy.getAttack(), "Battle", JOptionPane.INFORMATION_MESSAGE);
                         try {
@@ -201,7 +197,6 @@ public class UtilityMode implements ActionListener {
             public void actionPerformed(ActionEvent e) {
                 Monster enemy;
                 while (++x > 0) {
-                   // eastButton.setText("East " + Integer.toString(x));
                    try {
                     enemy = new Monster(name);
                     String enemyName = enemies[getRandom.nextInt(enemies.length)];
@@ -302,9 +297,7 @@ public class UtilityMode implements ActionListener {
             }
 
            JOptionPane.showMessageDialog(window, enemy.type+"was defeated. You gain "+newExperience+"XP");
-           System.out.println(lev);
            storage.saveCurrentGameUI(name, lev, newExperience, hp, att, def);
-           //storage.saveCurrentGame(name, newExperience, hp);
            statTextField.setText("Name:\t" + list.toString().replace("[", "").split(",")[0] + "\n" + "HP:\t"
                 + hp + "\n" + "Level:\t" + lev + "\n"
                 + "Attack:\t" + att + "\n" + "Defense:\t"
@@ -366,7 +359,6 @@ public class UtilityMode implements ActionListener {
                     }
                    
                    JOptionPane.showMessageDialog(window, enemy.type+" was defeated. You gain "+(enemy.getHP() * enemy.getAttack()) +"XP");
-               
                    storage.saveCurrentGameUI(name, lev, newExperience, hp, att, def);
                    statTextField.setText("Name:\t" + list.toString().replace("[", "").split(",")[0] + "\n" + "HP:\t"
                         + hp + "\n" + "Level:\t" + lev + "\n"
