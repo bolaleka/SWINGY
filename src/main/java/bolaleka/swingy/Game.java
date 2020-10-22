@@ -19,6 +19,9 @@ public class Game {
             }else if(args.length != 1) {
                 System.out.println("Too many argument");
                 System.exit(1);
+            }else {
+                System.out.println("USAGE: java -jar target/bolaleka-swingy.jar [GUI/CONSOLE]");
+                System.exit(1);
             }
             
         } catch (ArrayIndexOutOfBoundsException e) {
