@@ -14,3 +14,6 @@ des,Hero,1,2760,Knife,SilverArmor,36,9,5
 uyo,Hero,4,9140,Knife,SilverArmor,32,9,5
 gss,Hero,5,12660,Knife,SilverArmor,23,39,35
 hut,Hero,2,5180,Knife,SilverArmor,33,18,10
+iong,Hero,1,1000,Knife,SilverArmor,40,9,5
+goting,Hero,1,1220,Knife,SilverArmor,35,9,5
+foiu,Hero,3,5180,Knife,SilverArmor,34,29,25

@@ -17,9 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import bolaleka.swingy.model.characters.Monster;
-import bolaleka.swingy.model.storage.Storage;
-import bolaleka.swingy.model.ui.UtilityMode;
+import bolaleka.swingy.controller.DataController;
 
 public class GuiManager {
 
@@ -37,11 +35,9 @@ public class GuiManager {
     Font medium = new Font("Times New Roman", Font.PLAIN, 20);
 
 
-    Storage data;
-    Monster monster;
+    DataController controller;
     ClickStart start = new ClickStart();
     CreateGameHandler createGame = new CreateGameHandler();
-    UtilityMode mode = new UtilityMode();
 
     public GuiManager() {
 
@@ -141,8 +137,9 @@ public class GuiManager {
                 if (!textFieldValue.isEmpty() && !textFieldValue.isBlank()) {
                     System.out.println(textFieldValue);
                     try {
-                        data = new Storage(textFieldValue);
-                        data.saveUIData(textFieldValue);
+                        controller = new DataController(textFieldValue);
+                        controller.getStorage().saveUIData(textFieldValue);
+
                         enterHeroName.setVisible(false);
                         saveButton.setVisible(false);
                         loadUIGame();
@@ -201,7 +198,7 @@ public class GuiManager {
                         arenaTextLabel.setVisible(false);
 
                         try {
-                        mode.navigateUI(window, textFieldValue);
+                         controller.getModeUI().navigateUI(window, textFieldValue);   
                     } catch (IOException e1) {
                         e1.printStackTrace();
                     }
